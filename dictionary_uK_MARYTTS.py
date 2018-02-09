@@ -5,7 +5,7 @@ import os
 
 softletters=set(u"’яїюіьє")
 startsyl=set(u"#'ьаяоїуюеєіи-")
-others = set(["#", "+", "-", u"ь", u"ъ", u"’"])
+others = set(["#", "+", "-", u"ь", u"ъ", u"'"])
 
 softhard_cons = {                                                                
     u"б" : u"b",
@@ -65,8 +65,12 @@ def convert_vowels(phones):
         if prev in startsyl:
             if phone[0] in set(u"’яюєї"):
                 new_phones.append("j")
-        if phone[0] in vowels:
+        if phone[0] == phone[1]:
+            new_phones.append(vowels[phone[0]] + vowels[phone[1]])
+            
+        elif phone[0] in vowels:
             new_phones.append(vowels[phone[0]] + str(phone[1]))
+  
         else:
             new_phones.append(phone[0])
         prev = phone[0]
@@ -89,12 +93,14 @@ def convert(stressword):
             else:
                 stress_phones.append((phone, ""))
             stress = 0
-    
+        
     # Pallatize
     pallatize(stress_phones)
     
     # Assign stress
     phones = convert_vowels(stress_phones)
+    
+
 
     # Filter
     phones = [x for x in phones if x not in others]
@@ -193,5 +199,5 @@ for line in open("ukrdic.txt"):
     
     word=stressword.replace("+", ""), convert(stressword)
     #print (word)
-    dic.write (line.strip()+" "+convert(stressword)+"\n")
+    dic.write (stressword.replace("+", "")+" | "+convert(stressword)+"\n")
 dic.close()
