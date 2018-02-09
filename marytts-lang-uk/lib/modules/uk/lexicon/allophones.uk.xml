@@ -3,7 +3,7 @@
 
     <silence ph="_"/>
 
-    <!-- Stressed vowels -->
+    <!-- Stressed vowels наголошені голосні-->
     
     <vowel ph="ii" vlng="l" vheight="5" vfront="1" vrnd="-"/>
     <vowel ph="yy" vlng="l" vheight="5" vfront="3" vrnd="-"/>
@@ -12,19 +12,15 @@
     <vowel ph="oo" vlng="l" vheight="3" vfront="5" vrnd="+"/>
     <vowel ph="aa" vlng="l" vheight="1" vfront="3" vrnd="-"/>
        
-    <!-- First level of reduction -->                        
+    <!-- First level of reduction голосні ненаголошені -->                        
     
     <vowel ph="a" vlng="s" vheight="2" vfront="4" vrnd="-"/>
     <vowel ph="e" vlng="s" vheight="3" vfront="2" vrnd="-"/>
     <vowel ph="i" vlng="s" vheight="4" vfront="2" vrnd="-"/>
     <vowel ph="y" vlng="s" vheight="4" vfront="4" vrnd="-"/>
     <vowel ph="u" vlng="s" vheight="5" vfront="5" vrnd="+"/>
-                               
-    <!-- Second level of reduction -->
-    
-    <vowel ph="ae" vlng="a" vheight="3" vfront="3" vrnd="-"/>
-    <vowel ph="ay" vlng="a" vheight="3" vfront="3" vrnd="-"/>
-    <vowel ph="ur" vlng="a" vheight="4" vfront="4" vrnd="-"/>                                                          
+    <vowel ph="o" vlng="s" vheight="2" vfront="2" vrnd="+"/>
+                                                                                  
 
     <!-- Consonants -->                                                          
 
